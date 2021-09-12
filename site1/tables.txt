@@ -1,0 +1,31 @@
+clear screen;
+drop table lawyer;
+create table lawyer(L_id number, lawyer_name varchar2(20), lawyer_phone varchar2(20), lawyer_address varchar2(20), lawyer_type varchar2(20), win number, loss number, percentage float, PRIMARY KEY (L_id));
+insert into lawyer values(1, 'Mr. Abdul','01718909098', 'Dhaka', 'Criminal', 10, 5, 70.21);
+insert into lawyer values(2, 'Mr. Bakul','01913909098', 'Dhaka', 'Digital media', 9, 6, 47.33);
+insert into lawyer values(3, 'Mr. Kiron','01618903338', 'Dhaka', 'Civil', 11, 5, 75.23);
+insert into lawyer values(4, 'Ms. Jinat','01618901238', 'Dhaka', 'Civil', 10, 4, 72.27);
+insert into lawyer values(5, 'Mr. kalim','01609803338', 'Dhaka', 'Criminal', 5, 1, 80.26);
+insert into lawyer values(6, 'Ms. Rakhi','01690093338', 'Dhaka', 'Civil', 15, 3, 90.51);
+select * from lawyer;
+
+drop table client;
+create table client(C_id number, client_name varchar2(20), client_phone varchar2(20), PRIMARY KEY (C_id));
+insert into client values(1, 'Jamal', '01516789098');
+insert into client values(2, 'Rinky', '01555589098');
+insert into client values(3, 'Basir', '01777789098');
+insert into client values(4, 'Ataul', '01709489098');
+select * from client;
+
+drop table request;
+create table request(req_id number, L_id number, C_id number, status int PRIMARY KEY (req_id));
+insert into request values(1,1, 1, 0);
+insert into request values(2,1, 2, 0);
+insert into request values(3,1, 3, 0);
+select * from request;
+
+drop table cases;
+create table cases(case_id number, L_id number, C_id number, results int, PRIMARY KEY (case_id));
+insert into cases values(1, 1, 3, -1);
+select * from cases;
+commit;

@@ -1,0 +1,19 @@
+clear screen;
+drop table lawyer;
+create table lawyer(L_id number, lawyer_name varchar2(20), lawyer_phone varchar2(20), lawyer_address varchar2(20), lawyer_type varchar2(20), win number, loss number, percentage float, PRIMARY KEY (L_id));
+insert into lawyer values(7, 'Mr. Hasem','01675909098', 'Rajshahi', 'Criminal', 11, 2, 95.21);
+insert into lawyer values(8, 'Mr. Imroj','019139067098', 'Rajshahi', 'Digital media', 9, 7, 30.33);
+insert into lawyer values(9, 'Mr. Azmir','01318903338', 'Rajshahi', 'Civil', 11, 5, 75.00);
+insert into lawyer values(10, 'Ms. Rima','01678901238', 'Rajshahi', 'Civil', 20, 4, 92.27);
+insert into lawyer values(11, 'Mr. Rony','01609078338', 'Rajshahi', 'Criminal', 8, 3, 71.26);
+insert into lawyer values(12, 'Ms. Tuli','01690564238', 'Rajshahi', 'Civil', 19, 6, 40.51);
+select * from lawyer;
+commit;
+
+drop table client;
+create table client(C_id number, client_name varchar2(20), client_phone varchar2(20), PRIMARY KEY (C_id));
+insert into client values(5, 'Bachu', '01500789098');
+insert into client values(6, 'Habib', '01559999098');
+insert into client values(7, 'Midul', '01771239098');
+insert into client values(8, 'Rivan', '01709321098');
+select * from client;
